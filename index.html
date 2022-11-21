@@ -77,11 +77,12 @@
 			}
 		}
 		function addTodo(newValue){
+			const d=new Date();
 			let ul=document.querySelector("ul")
 			console.log(ul)
 			let li=document.createElement("li")
 			li.innerHTML=`
-			<span class="listitem">${newValue}</span>
+			<span class="listitem">${newValue} ${d.getHours()}:${d.getMinutes()}</span>
 			<i class="fa-solid fa-rectangle-xmark"></i>`
 			li.classList.add("list-type")
 			ul.appendChild(li)
